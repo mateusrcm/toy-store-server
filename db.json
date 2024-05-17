@@ -1,0 +1,101 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"name": "Barbie",
+			"description": "Barbie doll nurse.\nYes, She Can!",
+			"tags": ["DOLL", "GIRL"],
+			"price": 199.99,
+			"stock": 300,
+			"averageRate": 5,
+			"avaliationsCount": 1,
+			"enabled": true
+		},
+		{
+			"id": "49bf",
+			"name": "TESTE",
+			"description": "TESTE",
+			"tags": ["LEGO", "CAR"],
+			"price": 123,
+			"stock": 123,
+			"avaliationsCount": 0,
+			"averageRate": 0,
+			"enabled": true
+		}
+	],
+	"product_images": [],
+	"product_avaliations": [
+		{
+			"id": 1,
+			"productId": 1,
+			"rate": 5,
+			"comment": "Very good toy, the size is just perfect",
+			"userId": 30
+		}
+	],
+	"users": [
+		{
+			"id": 1,
+			"firstName": "John",
+			"lastName": "Pearson",
+			"birthDate": "1990-05-05T00:00:00.000Z",
+			"picture": null,
+			"mail": "jpearson@gmail.com",
+			"userName": "jpearson",
+			"password": "jpearson",
+			"profile": "Client"
+		},
+		{
+			"id": 2,
+			"firstName": "John",
+			"lastName": "Purchase",
+			"birthDate": "1990-01-01T00:00:00.000Z",
+			"picture": null,
+			"mail": "jpurchase@gmail.com",
+			"userName": "jpurchase",
+			"password": "jpurchase",
+			"profile": "Seller"
+		},
+		{
+			"id": 3,
+			"firstName": "John",
+			"lastName": "Pearson",
+			"birthDate": "1980-04-04T00:00:00.000Z",
+			"picture": null,
+			"mail": "admin@gmail.com",
+			"userName": "admin",
+			"password": "admin",
+			"profile": "Admin"
+		},
+		{
+			"firstName": "Mateus",
+			"lastName": "Martins",
+			"birthDate": "2024-05-15T18:27:59.800Z",
+			"picture": "",
+			"mail": "mateus.rc.martins@gmail.com",
+			"userName": "mateusrc",
+			"password": "mateusrc",
+			"profile": "Client",
+			"id": 4
+		}
+	],
+	"orders": [
+		{
+			"date": "2024-05-05T23:13:58.259Z"
+		}
+	],
+	"profiles": [
+		{
+			"id": 1,
+			"name": "Admin"
+		},
+		{
+			"id": 2,
+			"name": "Seller"
+		},
+		{
+			"id": 3,
+			"name": "Client"
+		}
+	]
+}

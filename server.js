@@ -37,14 +37,32 @@ server.put("/products_with_images/:id", (req, res, next) => {
 });
 
 function update(req) {
+	const db = router.db; // Assign the lowdb instance
 	const images = req.body.product_images;
 
 	delete req.body.product_images;
 
 	const product = insert(req, req.body, "products"); // Add product
+	const imagesInDb = db
+		.get("product_images")
+		.filter((img) => img.productId === product.id);
+
+	const removedImages = imagesInDb.filter(
+		(img) => !images.some((image) => img.id === image.id)
+	);
+
+	removedImages.forEach((image) => {
+		db.get("product_images").removeById(image.id).value();
+	});
 
 	product.product_images = images.map((image) => {
-		return insert(req, { productId: product.id, ...image }, "product_images"); // Add product images
+		const img = insert(
+			req,
+			{ productId: product.id, ...image },
+			"product_images"
+		); // Add product images
+
+		return img;
 	});
 
 	return product;
